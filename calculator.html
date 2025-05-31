@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>MY APP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form>
+            <label>enter the first number:</label>
+            <input id="first"></br>
+            <label>enter the second number: </label>
+          <input id="second"></form></br>
+            <select id="operator">
+                <option>+</option>
+                 <option>-</option>
+                  <option>*</option>
+                   <option>/</option>
+                
+            </select>
+            <button onclick="calculate()">Submit</button>
+            <h2>Result:<span id="resultText"></span></h2>
+        
+           
+        </form>
+        <a href="/malavika.html">go back</a>
+    </div>
+<script>
+    let no1=parseInt(document.getElementById("first").value);
+    let no2=parseInt(document.getElementById("second").value);
+    let op=document.getElementById("operator").value;   
+    var result=0;
+    function calculate(){
+
+    if(op=="+"){
+         result=no1+no2;
+    }
+        else if(op=="-"){
+            result=no1-no2;
+    }
+    else if(op=="*"){
+        result=no1*no2;
+    }
+    else{
+        result=no1/no2;
+    }
+    
+   
+    document.getElementById("resultText").innerText=result;
+
+
+    event.preventDefault();
+    }
+
+
+     console.log(result)
+
+     </script>
+</body>
+</html>
